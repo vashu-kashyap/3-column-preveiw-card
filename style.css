@@ -1,0 +1,156 @@
+/* importing google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* color and fonts variables */
+
+:root {
+  --Lexend-deca: "Lexend Deca", sans-serif;
+  --big-shoulder: "Big Shoulders Display", cursive;
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-darkcyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-lightgray: hsl(0, 0%, 95%);
+}
+
+/* css reseting rule */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--big-shoulder);
+  word-spacing: 5px;
+}
+.attribution a {
+  color: var(--Bright-orange);
+  text-decoration: none;
+  
+
+}
+
+body {
+  background-color: var(--Transparent-white);
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: var(--big-shoulder);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--Bright-orange);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card {
+  max-width: 300px;
+  min-height: 500px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.container .card:nth-child(1) {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 0px 0px 10px;
+}
+.container .card:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+.container .card:nth-child(3) {
+  background-color: var(--Very-darkcyan);
+  border-radius: 0px 10px 10px 0px;
+}
+
+.container .card h2 {
+  font-family: var(--big-shoulder);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--Transparent-white);
+  margin-top: 1.5rem;
+}
+
+.container .card p {
+  font-family: var(--Lexend-deca);
+  color: var(--Very-lightgray);
+  font-weight: 400;
+  font-size: 0.93rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.container .card a {
+  font-family: var(--Lexend-deca);
+  background-color: var(--Transparent-white);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.93rem;
+  margin-top: 6.5rem;transition: all 0.2s ease-in-out;
+
+  
+}
+
+
+
+.container .card:nth-child(1) a {
+  color: var(--Bright-orange);
+      border: 2px solid var(--Bright-orange);
+
+}
+
+.container .card:nth-child(2) a {
+  color: var(--Dark-cyan);
+      border: 2px solid var(--Dark-cyan);
+
+}
+
+
+
+.container .card:nth-child(3) a {
+  color: var(--Very-darkcyan);
+      border: 2px solid var(--Very-darkcyan);
+
+}
+
+.container .card a:hover{
+    background-color: transparent ;
+    color: var(--Transparent-white);
+    border: 2px solid var(--Transparent-white);
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .container .card:nth-child(1) {
+       
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      .container .card:nth-child(3) {
+       
+        border-radius: 0px 0px 10px 10px;
+      }
+
+
+
+}
